@@ -1,0 +1,89 @@
+body { 
+    background-color: rgb(240, 248, 255);
+}
+
+.carousel{
+    top: 250px;
+    overflow: hidden;
+    display: flex;
+    height: 300px;
+    max-width: 600px; /*set the same width like image resolution*/
+    position: relative; /*to put the buttons inside the carousel(with absolute position)*/
+    margin:auto;
+}
+
+.index {
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+    position: absolute;
+}
+
+.carousel_image{ 
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.carousel_image, .carousel_image--hidden {
+    display: none;
+}
+
+.carousel_image--visible {
+    display: block;
+    animation: fadeVisibility 0.7s;
+    background-color: darkgray;
+}
+
+.previous-button, .next-button {
+    background:black;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.25;
+    position: absolute;
+    width: 3rem;
+    z-index: 1;
+}
+
+#previous {
+    align-self: center;
+    left: 5px;
+}
+
+#next {
+    align-self: center;
+    right: 5px;
+}
+
+.dot-class {
+    position: relative;
+    top: 270px;
+}
+.dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    border-radius: 50%;
+    background-color: gainsboro;
+    display: inline-block;
+}
+
+.dot:hover {
+    background-color: darkgrey;
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
